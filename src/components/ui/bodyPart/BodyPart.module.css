@@ -1,0 +1,14 @@
+.bodyPart {
+    width: 100%;
+    height: 100vh;
+
+}
+.bufferSpace {
+    width: 100%;
+    height: 3rem;
+}
+.bodyPartContent{
+    width: 100%;
+    border: solid black 1px;
+
+}
