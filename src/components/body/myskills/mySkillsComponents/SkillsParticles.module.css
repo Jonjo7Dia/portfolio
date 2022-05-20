@@ -1,10 +1,16 @@
 .skillsParticles {
     width: 50%;
     height: 100%;
+    position: relative;
 }
-/* @media only screen and (max-width: 768px){
+.skillsParticles canvas{
+    position: absolute
+}
+#tsparticles{
+    position: absolute
+}
+@media only screen and (max-width: 768px){
     .skillsParticles{
-        width: 100%;
-        height: 50%;
+        display:none;
     }
-} */
+}

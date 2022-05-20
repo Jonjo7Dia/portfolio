@@ -1,0 +1,69 @@
+.skillsIcons{
+    width: 98%;
+    height: 30%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    display: none;
+}
+.skillsIcons div{
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    width: 5rem;
+    max-width: 8rem;
+    height: 2.5rem; 
+
+}
+.icon1 {
+    animation: iconFade 1s ease forwards .5s;
+
+}
+.icon2 {
+    animation: iconFade 1s ease forwards .7s;
+
+}
+.icon3 {
+    animation: iconFade 1s ease forwards .9s;
+
+}
+.icon4 {
+    animation: iconFade 1s ease forwards 1.1s;
+
+}
+.icon5 {
+    animation: iconFade 1s ease forwards 1.3s;
+
+}
+.icon6{
+    animation: iconFade 1s ease forwards 1.5s;
+
+}
+.icon7{
+    animation: iconFade 1s ease forwards 1.7s;
+
+}
+.skillsIcons img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 768px){
+    .skillsIcons{
+       display: flex;
+
+    }
+}
+
+@keyframes iconFade{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+
+    }
+}
