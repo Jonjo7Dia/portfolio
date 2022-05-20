@@ -1,0 +1,30 @@
+.aboutHeader {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.aboutHeader h1{
+    text-align: center;
+    font-size: 2w !important;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+.aboutHeader h4{
+    font-family: 'poppins';
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white;
+}
