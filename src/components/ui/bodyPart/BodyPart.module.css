@@ -9,9 +9,9 @@
 }
 .bodyPartContent{
     width: 100%;
+    height: calc(100vh - 6rem);
     display: flex;
     justify-content: center;
-
 }
 html { /* body won't work ¯\_(ツ)_/¯ */
     scroll-snap-type: y mandatory;

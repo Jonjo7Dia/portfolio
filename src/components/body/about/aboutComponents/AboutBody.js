@@ -1,13 +1,15 @@
+import classes from "./AboutBody.module.css";
+
 function AboutBody() {
   return (
-    <div>
-      I'm a front-end developer located in Poland. I have a serious passion for
-      UI effects, animations and creating intuitive, dynamic user experiences.
-      well-organised, proglem solver, independent employee with high attention
-      to detail. Fan of MMA, outdoor activities, TV series and English
-      literature. A family person and father of two fractious boys, interested
-      in the entire fronteend spectrum and wroking on abmitious projects with
-      positive peoples
+    <div className={classes.aboutBody}>
+      <p>
+        I'm a front-end developer from Denmark but currently living in
+        Argentina. I have a serious passion for front-end development.
+        Well-organised, self-drive, and love to solve problems. Fan of outdoor
+        activities, travelling, movies and languages. Interested in the entire fronteend spectrum and
+        working on projects with positive people
+      </p>
     </div>
   );
 }

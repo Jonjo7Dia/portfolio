@@ -1,5 +1,8 @@
 .about {
     width: 95%;
-    height: calc(100vh - 3rem - 1px);
-    border: solid 1px black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

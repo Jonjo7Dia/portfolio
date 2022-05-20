@@ -1,0 +1,16 @@
+.aboutBody{
+    width: 28rem;
+}
+.aboutBody p{
+    text-align: justify;
+    line-height: 150%;
+    color: white;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 768px){
+    .aboutBody{
+        width: 20rem;
+    }
+}

@@ -1,5 +1,6 @@
 import classes from "./BodyPart.module.css";
 
+import BodyFooter from './BodyFooter';
 function BodyPart(props) {
   return (
     <div className={classes.bodyPart} style={{ backgroundColor: props.color }}>
@@ -7,6 +8,7 @@ function BodyPart(props) {
       <div className={classes.bodyPartContent}>
         {props.children}
       </div>
+      <BodyFooter/>
     </div>
   );
 }
