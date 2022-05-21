@@ -32,7 +32,7 @@ function SkillsIcons() {
   } else {
     iconClasses = [null, null, null, null, null, null, null];
   }
-  console.log(iconClasses);
+
   return (
     <div className={classes.skillsIcons} ref={myRef}>
       <div className={iconClasses[0]}>

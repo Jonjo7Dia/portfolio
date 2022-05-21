@@ -1,0 +1,88 @@
+.desktopDescription {
+    position: absolute;
+    background-color: white;
+    width: 27rem;
+    height: 30rem;
+    left: 35vw;
+    top: 18vh;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+.projectHeader {
+    width: 100%;
+    height: 15%;
+    border-bottom: black solid 1px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.projectHeader h1{
+    margin: 0;
+}
+.projectLinks {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.projectName {
+    width: 80%;
+    height: 100%;
+    border-right: solid black 1px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+    padding-left: .5rem;
+    box-sizing: border-box;
+    text-transform: uppercase;
+
+}
+.projectAbout {
+    width: 100%;
+    height: 65%;
+    border-bottom: black solid 1px;
+    
+}
+.projectAbout p{
+    font-family: 'Poppins';
+    text-align: justify;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+.projectLinks a{
+    text-decoration: none;
+    color: grey;
+    font-size: 1.8vw;
+}
+.projectLinks a:hover {
+    color: black;
+}
+.techUsed{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 890px){
+    .desktopDescription{
+        left: 28vw;
+    }
+}
+@media only screen and (max-width: 772px){
+    .desktopDescription{
+        left: auto;
+        width: 50vw;
+        top: 20vh;
+        height: 50vh;
+
+    }
+}

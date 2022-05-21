@@ -35,7 +35,7 @@ function NavBar() {
     ];
     line1Style = line2Style = line3Style = "";
   }
-  console.log(line1Style);
+
 
   return (
     <div className={classes.navBar}>

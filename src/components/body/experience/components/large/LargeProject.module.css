@@ -1,0 +1,23 @@
+.largeProject {
+    width: 100vw;
+    height:calc(95vh - 6rem);
+
+    display: flex;
+    justify-content: center;
+}
+.largeBody {
+    width: 82%;
+    height: 100%;
+  
+    position: relative;
+    
+}
+
+@media only screen and (max-width:800px){
+    .largeBody {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+}

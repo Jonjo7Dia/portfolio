@@ -1,0 +1,99 @@
+.desktopBrowser {
+    width: 54vw;
+    height: 30vw;
+
+    background-color: #3c3c3c;
+    border-radius: 12px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+}
+.desktopBrowserNav{
+    width: 100%;
+    height: 2rem;
+
+    display: flex;
+    justify-content: flex-start;
+}
+.browserButtons{
+    width: 6rem;
+    height: 100%;
+     display: flex;
+     flex-direction: row;
+     gap: .7rem;
+     align-items: center;
+}
+.browserButtons div{
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+
+}
+.browserClose {
+    background-color: #ed6b5e;
+    margin-left: .5rem;
+}
+.browserMin {
+    background-color: #f4bf4f;
+}
+.browserSize{
+    background-color: #61c554;
+}
+
+.desktopBrowserBody{
+    width: 100%;
+    height: calc(100% - 2rem);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+.desktopBrowser img {
+    width: 100%;
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@media only screen and (max-width:1000px){
+    .desktopBrowser {
+        width: 80%;
+        height: 70%;
+    
+        background-color: #3c3c3c;
+        border-radius: 12px;
+        position: absolute;
+        left: 0;
+        top: 5%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width:800px){
+    .desktopBrowser {
+        width: 83%;
+        height: 33%;
+    
+        background-color: #3c3c3c;
+        border-radius: 12px;
+        position: absolute;
+        top: 0;
+        left: 8.5%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        flex-direction: column;
+    }
+    .desktopBrowserNav{
+        height: 1.5rem;
+    }
+    .desktopBrowserBody{
+        height: calc(100% - 1.5rem);
+    }
+
+}
