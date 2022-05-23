@@ -9,27 +9,21 @@ function LargeDescription(props) {
     <div className={classes.desktopDescription}>
       <div className={classes.projectHeader}>
         <div className={classes.projectName}>
-          <h1>Project Name</h1>
+          <h1>{props.title}</h1>
         </div>
         <div className={classes.projectLinks}>
-          <a href="" target="_blank" rel="noreferrer">
+          <a href={props.github} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
 
         </div>
       </div>
       <div className={classes.projectAbout}>
-          <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-        eum, doloribus distinctio dicta qui odio voluptatibus eius repellat
-        exercitationem delectus quaerat nihil, nulla perspiciatis earum?
-        Voluptas atque, nulla, magni reiciendis iste aut, tempora neque
-        molestiae facere corrupti modi et similique dolore inventore ipsum
-        praesentium qui totam asperiores soluta laborum. Vitae praesentium
-        recusandae incidunt debitis accusamus. Consequuntur excepturi sint
-        delectus quae ut fugiat architecto nesciunt et cum. Nam culpa cupiditate
-        exercitationem odio blanditiis error, in magni unde velit omnis quae
-        expedita?
+          <p className={classes.primaryAbout}>
+       {props.description}
+        </p>
+        <p className={classes.alternateAbout}>
+          {props.alternate}
         </p>
       </div>
       <div className={classes.techUsed}>

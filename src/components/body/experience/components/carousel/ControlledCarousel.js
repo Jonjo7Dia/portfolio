@@ -4,6 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Quizlet from "./slides/Quizlet";
 import Portfolio from "./slides/Portfolio";
 import Compound from "./slides/Compound";
+import VirtualBar from './slides/VirtualBar'
 function ControlledCarousel(props) {
   useState();
   const [index, setIndex] = useState(0);
@@ -27,6 +28,9 @@ function ControlledCarousel(props) {
       </Carousel.Item>
       <Carousel.Item>
         <Compound></Compound>
+      </Carousel.Item>
+      <Carousel.Item>
+        <VirtualBar></VirtualBar>
       </Carousel.Item>
     </Carousel>
   );

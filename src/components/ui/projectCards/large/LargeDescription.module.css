@@ -29,6 +29,9 @@
     align-items: center;
     justify-content: space-around;
 }
+.alternateAbout{
+    display: none;
+}
 .projectName {
     width: 80%;
     height: 100%;
@@ -80,6 +83,12 @@
 
 }
 @media only screen and (max-width: 830px){
+    .primaryAbout {
+        display: none;
+    }
+    .alternateAbout{
+        display: block;
+    }
     .techUsed{
         height: 25%;
         width: 100%;
@@ -104,13 +113,18 @@
         border: none;
 
     }
+    .projectAbout p{
+        margin: 0;
+    }
     .projectName {
         justify-content: left;
         text-align: center;
         border: none;
+        padding: 0;
     }
     .projectHeader{
         border: none;
+
 
     }
     .projectLinks a{
