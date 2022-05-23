@@ -1,9 +1,17 @@
 import classes from "./LinkButton.module.css";
 
 function LinkButton(props) {
+    console.log(props.mobile);
+    let buttonClass;
+    if(props.mobile){
+        buttonClass = classes.linkButton;
+    }
+    else {
+        buttonClass = classes.gone;
+    }
   return (
     <div className={classes.center}>
-      <button className={classes.linkButton}>
+      <button className={buttonClass}>
           <a href={props.link} target="_blank" rel="noreferrer">
 
         <svg width="180px" height="60px" viewBox="0 0 180 60">
@@ -14,6 +22,8 @@ function LinkButton(props) {
         </a>
 
       </button>
+      {!props.mobile && <p>Unfortunately no mobile version available </p>}
+
     </div>
   );
 }
