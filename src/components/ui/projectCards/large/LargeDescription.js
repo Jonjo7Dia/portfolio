@@ -2,7 +2,6 @@ import classes from "./LargeDescription.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
 import TechStack from '../../techStack/TechStack';
 function LargeDescription(props) {
 
@@ -16,9 +15,7 @@ function LargeDescription(props) {
           <a href="" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faLink} />
-          </a>
+
         </div>
       </div>
       <div className={classes.projectAbout}>

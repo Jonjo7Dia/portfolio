@@ -1,6 +1,7 @@
 import classes from "./AboutBody.module.css";
 
 function AboutBody() {
+
   return (
     <div className={classes.aboutBody}>
       <p>
@@ -10,6 +11,7 @@ function AboutBody() {
         activities, travelling, movies and languages. Interested in the entire fronteend spectrum and
         working on projects with positive people
       </p>
+     
     </div>
   );
 }

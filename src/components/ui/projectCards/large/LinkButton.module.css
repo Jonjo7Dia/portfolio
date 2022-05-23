@@ -1,0 +1,52 @@
+.center {
+  width: 180px;
+  height: 60px;
+  position: relative;
+}
+
+.linkButton {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 4px solid #eb757f;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.linkButton svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.linkButton:hover {
+  transition: 1s ease-in-out;
+  background: #4495e5;
+}
+
+.linkButton:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.linkButton span {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.linkButton a{
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 660px) and (max-width: 830px){
+    .center{
+        position: absolute;
+        top: 56%;
+    }
+}

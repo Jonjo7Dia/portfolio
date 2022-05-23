@@ -1,5 +1,7 @@
 .aboutBody{
     width: 28rem;
+    position: relative;
+    z-index: 1;
 }
 .aboutBody p{
     text-align: justify;
@@ -8,6 +10,7 @@
     font-family: 'Poppins';
     letter-spacing: 1px;
 }
+
 
 @media only screen and (max-width: 768px){
     .aboutBody{

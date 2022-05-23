@@ -18,16 +18,20 @@ function Body() {
       <BodyPart color={"#f5c544"}>
         <Experience></Experience>
       </BodyPart>
-      <BodyPart color={"#8e26b4"}>
+      <BodyPart color={"#4495e5"}>
         <CurrentProject></CurrentProject>
       </BodyPart>
-      <BodyPart color={"#b7ee5d"}>
+      <BodyPart color={"#eb757f"}>
         <Resume></Resume>
       </BodyPart>
-      <BodyPart color={"#ea346e"}>
+      <BodyPart color={"#f5c544"}>
         <Contact></Contact>
       </BodyPart>
     </div>
   );
 }
 export default Body;
+
+//"#8e26b4"
+//"#b7ee5d"
+//"#ea346e

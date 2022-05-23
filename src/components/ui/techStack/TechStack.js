@@ -7,7 +7,7 @@ import Node from "../svgPhotos/nodejs.svg";
 import react from "../svgPhotos/react.svg";
 import redux from "../svgPhotos/redux.svg";
 import firebase from "../svgPhotos/firebase.svg";
-
+import Chart from '../svgPhotos/chartjs-logo.svg';
 import classes from "./TechStack.module.css";
 
 function TechStack(props) {
@@ -48,6 +48,10 @@ function TechStack(props) {
       src: firebase,
       name: "Firebase",
     },
+    chart: {
+      src: Chart,
+      name: 'Chart.js'
+    }
   };
 
   return (
