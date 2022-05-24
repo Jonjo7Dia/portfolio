@@ -1,0 +1,31 @@
+.resume {
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.resume img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+    transition: all .2s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+}
+.resume a {
+    height: 100%;
+    width: 95%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume img:hover{
+    transform: scale(1.1); 
+
+}
