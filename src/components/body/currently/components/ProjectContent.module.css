@@ -1,13 +1,145 @@
 .projectContent{
     width: 80%;
     height: 100%;
-    border: white solid 1px;
+
+    position: relative;
 
 }
+.desktop {
+    position: absolute;
+    width: 54vw;
+    height: 30vw;
+    transform: translateX(25%) translateY(25%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
 
-@media screen  and (max-width:760px){
+}
+.desktopAnimation{
+    animation: moveTopLeft 1s forwards;
+
+}
+.desktopAnimationOout {
+    animation: moveBackDesktop 1s forwards;
+}
+.description {
+    width: 25rem;
+    height: 30rem;
+    position: absolute;
+    z-index: 2;
+    right: 50%;
+    top: 25%;
+
+}
+.descriptionAnimation {
+    animation: moveRight 0.5s forwards;
+}
+.mobile {
+    width: 18rem;
+    height: 30rem;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 14px;
+   left: 50%;
+       top: 25%;
+    
+}
+.mobileAnimation{
+    animation: moveLeft 1.2s forwards;
+}
+
+@media screen and (max-width: 1000px){
+    .desktop{
+        width: 600px;
+        height: 337.5px;
+    }
+}
+/* @media screen and (max-width: ) */
+@media screen and (max-width: 885px){
+    .desktopAnimation {
+        animation: none;
+    }
+    .descriptionAnimation {
+        animation: none;
+    }
+    .mobileAnimation{
+        animation: none;
+    }
+    .desktop {
+        margin-left: .5vw;
+        width: 100%;
+        height: 54vw;
+        transform: none !important; 
+
+    }
+    .mobile {
+        height: 35%;
+        width: 25%;
+        top: 20%;
+        left: calc(70%);
+    }
+    .description{
+        top: 50%;
+        left: 0;
+        width: 95%;
+        height: 50%;
+        margin-left: 2.5%;
+
+
+
+    }
+}
+@media screen  and (max-width:680px){
+   
+
     .projectContent {
         width: 100%;
         height: 80%;
+    }
+    .mobile {
+        width: 30%;
+    }
+    
+    
+}
+@keyframes moveTopLeft{
+    from {
+        transform: translateX(25%) translateY(35%);
+    }
+    to {
+        transform: translateX(20%) translateY(5%);
+    }
+}
+@keyframes moveBackDesktop{
+    from {
+        transform: translateX(20%) translateY(5%);
+        
+    }
+    to {
+        transform: translateX(25%) translateY(35%);
+
+    }
+}
+
+@keyframes moveRight{
+    from {
+        right: 50%;
+    top: 25%;
+
+    }
+    to {
+    
+      right: 0;
+        top: 25%;
+
+    }
+}
+@keyframes moveLeft {
+    from {
+        left: 50%;
+       top: 25%;
+    }
+    to {
+        left: 10%;
+        top: 40%;
     }
 }
