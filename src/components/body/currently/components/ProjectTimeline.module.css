@@ -1,0 +1,133 @@
+.timelineBody {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.timeLabels {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.labelsWrapper {
+  width: 100%;
+  height: 95%;
+}
+.labelsWrapper div {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+.labelsWrapper p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #3c3c3c;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.fillBody {
+  height: 95%;
+  width: 1.1rem;
+  background-color: #3c3c3c;
+  border-radius: 1.5em;
+}
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+.fill {
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  width: 100%;
+  height: 25%;
+  background-color: white;
+  animation: progressGrowth 2.5s ease-in;
+}
+.finished {
+  animation: colorChange 0.2s forwards 2.2s;
+}
+
+@keyframes progressGrowth {
+  from {
+    height: 0;
+  }
+  to {
+    height: 25%;
+  }
+}
+@keyframes colorChange {
+  from {
+    color: #3c3c3c;
+  }
+  to {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .timelineBody {
+    width: 100%;
+    height: 20%;
+    flex-direction: column-reverse;
+  }
+  .timeline {
+    width: 100%;
+    height: 20%;
+  }
+  .fillBody {
+    height: 1.5rem;
+    width: 95%;
+  }
+  .fill {
+    width: 25%;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5em;
+    animation: progressMobile 2.5s ease-in;
+  }
+  .timeLabels {
+      width: 100%;
+      height: 80%;
+      justify-content: center
+  }
+
+  .labelsWrapper {
+  
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .labelsWrapper div{
+    width: 25%;
+    height: 100%;
+    justify-content:flex-end;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-top: 1rem;
+  }
+  .labelsWrapper p{
+      writing-mode:vertical-rl;
+      text-align: left;
+      width: 100%;
+  }
+}
+
+@keyframes progressMobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25%;
+  }
+}

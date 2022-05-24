@@ -1,7 +1,6 @@
 import classes from "./LinkButton.module.css";
 
 function LinkButton(props) {
-    console.log(props.mobile);
     let buttonClass;
     if(props.mobile){
         buttonClass = classes.linkButton;
