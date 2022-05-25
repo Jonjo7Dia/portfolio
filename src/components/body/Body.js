@@ -6,28 +6,49 @@ import MySkills from "./myskills/MySkills";
 import Experience from "./experience/Experience";
 import CurrentProject from "./currently/CurrentProject";
 import Resume from "./resume/Resume";
-function Body() {
+function Body(props) {
   var vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', vh + 'px');
+  document.documentElement.style.setProperty("--vh", vh + "px");
   return (
-    <div className={classes.body} id={'body'}>
-      <BodyPart color={"#4495e5"} id={'about'}>
-        <About></About>
+    <div className={classes.body} id={"body"}>
+      <BodyPart color={"#4495e5"} id={"about"}>
+        <About
+         onView={(string) => {
+          props.onView(string);
+        }}></About>
       </BodyPart>
-      <BodyPart color={"#eb757f"} id={'skills'}>
-        <MySkills></MySkills>
+      <BodyPart color={"#eb757f"} id={"skills"}>
+        <MySkills
+          onView={(string) => {
+            props.onView(string);
+          }}
+        ></MySkills>
       </BodyPart>
-      <BodyPart color={"#f5c544"} id={'exp'}>
-        <Experience></Experience>
+      <BodyPart color={"#f5c544"} id={"exp"}>
+        <Experience
+         onView={(string) => {
+          props.onView(string);
+        }}></Experience>
       </BodyPart>
-      <BodyPart color={"#4495e5"} id={'current'}>
-        <CurrentProject></CurrentProject>
+      <BodyPart color={"#4495e5"} id={"current"}>
+        <CurrentProject
+          onView={(string) => {
+            props.onView(string);
+          }}
+        ></CurrentProject>
       </BodyPart>
-      <BodyPart color={"#eb757f"} id={'resume'}>
-        <Resume></Resume>
+      <BodyPart color={"#eb757f"} id={"resume"}>
+        <Resume
+          onView={(string) => {
+            props.onView(string);
+          }}
+        ></Resume>
       </BodyPart>
-      <BodyPart color={"#f5c544"} id={'contact'}>
-        <Contact></Contact>
+      <BodyPart color={"#f5c544"} id={"contact"}>
+        <Contact 
+         onView={(string) => {
+          props.onView(string);
+        }}></Contact>
       </BodyPart>
     </div>
   );

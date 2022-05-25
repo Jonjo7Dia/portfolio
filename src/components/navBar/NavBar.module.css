@@ -11,7 +11,7 @@
   background-color: transparent; /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   
 }
@@ -50,7 +50,9 @@ margin: 0;
 .navBar li  a {
     color: white !important;
 }
-
+.navBar li:active {
+    text-decoration: underline !important;
+}
 .navBar li:hover {
     cursor: pointer;
     text-decoration: underline;

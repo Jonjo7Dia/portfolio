@@ -36,9 +36,11 @@ function NavBar(props) {
     ];
     line1Style = line2Style = line3Style = "";
   }
+  console.log(props.currentView)
 
   return (
     <div className={classes.navBar}>
+      <div className={classes.current}>{props.currentView}</div>
       <ul style={listStyle}>
         <li className={links[0]}>
           <Link

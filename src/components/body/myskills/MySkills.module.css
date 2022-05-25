@@ -5,10 +5,20 @@
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+    position: relative;
+}
+.marker {
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    bottom: 0;
 }
 
 @media only screen and (max-width: 768px){
     .mySkills {
         flex-direction: column-reverse;
+    }
+    .marker {
+        bottom: 50%;
     }
 }
