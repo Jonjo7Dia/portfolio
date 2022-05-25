@@ -27,9 +27,10 @@
     text-transform: uppercase;
     color: white;
     font-weight: 600;
+    display: none;
 }
 .navBar ul {
-  width: 80%;
+  width: 100%;
   height: 100%;
   color: white;
   padding: 0;
@@ -62,6 +63,7 @@ margin: 0;
 
 .navBar li  a {
     color: white !important;
+    text-decoration: none ;
 }
 .navBar li:active {
     text-decoration: underline !important;
@@ -93,11 +95,15 @@ margin: 0;
     transition: all 0.3s ease;
     z-index: 100;
 }
-
+.selected {
+    text-decoration: underline !important;
+}
 
 @media screen and (max-width: 768px){
     .current {
         width: 50%;
+        display:block;
+        display: flex;
     }
     body {
         overflow-x: hidden;

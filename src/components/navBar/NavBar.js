@@ -36,7 +36,7 @@ function NavBar(props) {
     ];
     line1Style = line2Style = line3Style = "";
   }
-  console.log(props.currentView)
+  console.log(props.currentView);
 
   return (
     <div className={classes.navBar}>
@@ -51,6 +51,9 @@ function NavBar(props) {
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
             }}
+            className={`${
+              props.currentView === "About" ? classes.selected : ""
+            }`}
           >
             About
           </Link>
@@ -64,6 +67,9 @@ function NavBar(props) {
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
             }}
+            className={`${
+              props.currentView === "My Skills" ? classes.selected : ""
+            }`}
           >
             My Skills
           </Link>
@@ -78,6 +84,8 @@ function NavBar(props) {
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
             }}
+          className={`${props.currentView === 'My Experience' ? classes.selected : ''}`} 
+
           >
             Experience
           </Link>
@@ -91,6 +99,8 @@ function NavBar(props) {
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
             }}
+          className={`${props.currentView === 'Current Project' ? classes.selected : ''}`} 
+
           >
             Current Project
           </Link>
@@ -104,6 +114,8 @@ function NavBar(props) {
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
             }}
+          className={`${props.currentView === 'My Resume' ? classes.selected : ''}`} 
+
           >
             Resume
           </Link>
@@ -118,6 +130,8 @@ function NavBar(props) {
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
             }}
+          className={`${props.currentView === 'Contact' ? classes.selected : ''}`} 
+
           >
             Contact
           </Link>
