@@ -1,6 +1,7 @@
 import { useState } from "react";
 import classes from "./NavBar.module.css";
-
+import { Link } from "react-scroll";
+import $ from 'jquery';
 function NavBar() {
   const [navClick, setNavClick] = useState(false);
   let listStyle;
@@ -36,16 +37,40 @@ function NavBar() {
     line1Style = line2Style = line3Style = "";
   }
 
-
   return (
     <div className={classes.navBar}>
       <ul style={listStyle}>
-        <li className={links[0]}>About</li>
-        <li className={links[1]}>My Skills</li>
-        <li className={links[2]}>Experience</li>
-        <li className={links[3]}>Current Project</li>
-        <li className={links[4]}>Resume</li>
-        <li className={links[5]}>Contact</li>
+        <li className={links[0]}>
+          <Link to={'about'} spy={true} smooth={true} offset={0} duration={0}>
+            About
+          </Link>
+        </li>
+        <li className={links[1]}>
+          <Link to={'skills'}  spy={true} smooth={true} offset={0} duration={0}>
+            My Skills
+          </Link>
+        </li>
+        <li className={links[2]}>
+          <Link to={'experience'} spy={true} smooth={true} offset={0} duration={0}>
+
+            Experience
+          </Link>
+        </li>
+        <li className={links[3]}>
+          <Link  to={'current'}  spy={true} smooth={true} offset={0} duration={0}>
+            Current Project
+          </Link>
+        </li>
+        <li className={links[4]}>
+          <Link to={'resume'} spy={true} smooth={true} offset={0} duration={0}>
+            Resume
+          </Link>
+        </li>
+        <li className={links[5]}>
+          <Link to={'contact'}  spy={true} smooth={true} offset={0} duration={0}>
+            Contact
+          </Link>
+        </li>
       </ul>
       <div className={classes.burger}>
         <div

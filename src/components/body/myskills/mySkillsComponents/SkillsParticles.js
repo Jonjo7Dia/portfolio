@@ -99,7 +99,7 @@ function SkillsParticles() {
         },
       },
     };
-  }, [mobileDevice]);
+  }, [mobileDevice, limit]);
   const particlesInit = useCallback((engine) => {
     loadSlim(engine);
     //loadFull(engine);

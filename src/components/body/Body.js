@@ -9,22 +9,22 @@ import Resume from "./resume/Resume";
 function Body() {
   return (
     <div className={classes.body}>
-      <BodyPart color={"#4495e5"}>
+      <BodyPart color={"#4495e5"} id={'about'}>
         <About></About>
       </BodyPart>
-      <BodyPart color={"#eb757f"}>
+      <BodyPart color={"#eb757f"} id={'skills'}>
         <MySkills></MySkills>
       </BodyPart>
-      <BodyPart color={"#f5c544"}>
+      <BodyPart color={"#f5c544"} id={'experience'}>
         <Experience></Experience>
       </BodyPart>
-      <BodyPart color={"#4495e5"}>
+      <BodyPart color={"#4495e5"} id={'current'}>
         <CurrentProject></CurrentProject>
       </BodyPart>
-      <BodyPart color={"#eb757f"}>
+      <BodyPart color={"#eb757f"} id={'resume'}>
         <Resume></Resume>
       </BodyPart>
-      <BodyPart color={"#f5c544"}>
+      <BodyPart color={"#f5c544"} id={'contact'}>
         <Contact></Contact>
       </BodyPart>
     </div>

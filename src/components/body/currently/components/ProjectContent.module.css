@@ -22,8 +22,8 @@
   width: 25rem;
   height: 30rem;
   position: absolute;
-  z-index: 2;
-  right: 50%;
+  z-index: 1;
+  right: 25%;
   top: 25%;
 }
 .descriptionAnimation {
@@ -39,7 +39,7 @@
   top: 25%;
 }
 .mobileAnimation {
-  animation: moveLeft 1.2s forwards;
+  animation: moveLeft 0.5s forwards;
 }
 
 @media screen and (max-width: 1000px) {

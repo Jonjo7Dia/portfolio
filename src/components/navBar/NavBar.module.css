@@ -46,16 +46,28 @@ margin: 0;
 
     
 }
+
+.navBar li  a {
+    color: white !important;
+}
+
+.navBar li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 .burger {
     display: none;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    z-index: 100;
 
 }
 .burgerButton {
     user-select: none;
     margin-right: 20px;
+    z-index: 100;
+
 }
 
 .burgerButton div{
@@ -64,6 +76,7 @@ margin: 0;
     background-color: white;
     margin: 5px;
     transition: all 0.3s ease;
+    z-index: 100;
 }
 
 
