@@ -12,7 +12,7 @@
   position: absolute;
   height: 5px;
   width: 5px;
-  bottom: 0;
+  bottom: 10%;
 }
 .resume img {
   max-height: 100%;

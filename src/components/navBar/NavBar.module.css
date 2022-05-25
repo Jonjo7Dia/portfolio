@@ -15,8 +15,21 @@
   align-items: center;
   
 }
+.current {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    align-items: center;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
 .navBar ul {
-  width: 100%;
+  width: 80%;
   height: 100%;
   color: white;
   padding: 0;
@@ -83,6 +96,9 @@ margin: 0;
 
 
 @media screen and (max-width: 768px){
+    .current {
+        width: 50%;
+    }
     body {
         overflow-x: hidden;
     }
