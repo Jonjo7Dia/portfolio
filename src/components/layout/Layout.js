@@ -1,6 +1,7 @@
 import classes from "./Layout.module.css";
 import NavBar from "../navBar/NavBar";
 import Body from "../body/Body";
+
 function Layout() {
   return (
     <div className={classes.layout}>

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import classes from "./NavBar.module.css";
 import { Link } from "react-scroll";
-import $ from 'jquery';
-function NavBar() {
+
+function NavBar(props) {
   const [navClick, setNavClick] = useState(false);
   let listStyle;
   let links = [null, null, null, null, null, null];
@@ -41,33 +41,82 @@ function NavBar() {
     <div className={classes.navBar}>
       <ul style={listStyle}>
         <li className={links[0]}>
-          <Link to={'about'} spy={true} smooth={true} offset={0} duration={0}>
+          <Link
+            to={"about"}
+            onClick={() => {
+              const el = document.getElementById("about");
+              const pos = el.getBoundingClientRect();
+              const body = document.querySelector("#body");
+              body.scrollBy(0, pos.y);
+            }}
+          >
             About
           </Link>
         </li>
         <li className={links[1]}>
-          <Link to={'skills'}  spy={true} smooth={true} offset={0} duration={0}>
+          <Link
+            to={"skills"}
+            onClick={() => {
+              const el = document.getElementById("skills");
+              const pos = el.getBoundingClientRect();
+              const body = document.querySelector("#body");
+              body.scrollBy(0, pos.y);
+            }}
+          >
             My Skills
           </Link>
         </li>
         <li className={links[2]}>
-          <Link to={'experience'} spy={true} smooth={true} offset={0} duration={0}>
+          <Link
+            to={"exp"}
+            onClick={() => {
+              const el = document.getElementById("exp");
 
+              const pos = el.getBoundingClientRect();
+              const body = document.querySelector("#body");
+              body.scrollBy(0, pos.y);
+            }}
+          >
             Experience
           </Link>
         </li>
         <li className={links[3]}>
-          <Link  to={'current'}  spy={true} smooth={true} offset={0} duration={0}>
+          <Link
+            to={"current"}
+            onClick={() => {
+              const el = document.getElementById("current");
+              const pos = el.getBoundingClientRect();
+              const body = document.querySelector("#body");
+              body.scrollBy(0, pos.y);
+            }}
+          >
             Current Project
           </Link>
         </li>
         <li className={links[4]}>
-          <Link to={'resume'} spy={true} smooth={true} offset={0} duration={0}>
+          <Link
+            to={"resume"}
+            onClick={() => {
+              const el = document.getElementById("resume");
+              const pos = el.getBoundingClientRect();
+              const body = document.querySelector("#body");
+              body.scrollBy(0, pos.y);
+            }}
+          >
             Resume
           </Link>
         </li>
         <li className={links[5]}>
-          <Link to={'contact'}  spy={true} smooth={true} offset={0} duration={0}>
+          <Link
+            to={"contact"}
+            onClick={() => {
+              const el = document.getElementById("contact");
+              const pos = el.getBoundingClientRect();
+
+              const body = document.querySelector("#body");
+              body.scrollBy(0, pos.y);
+            }}
+          >
             Contact
           </Link>
         </li>

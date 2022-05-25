@@ -7,15 +7,17 @@ import Experience from "./experience/Experience";
 import CurrentProject from "./currently/CurrentProject";
 import Resume from "./resume/Resume";
 function Body() {
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
   return (
-    <div className={classes.body}>
+    <div className={classes.body} id={'body'}>
       <BodyPart color={"#4495e5"} id={'about'}>
         <About></About>
       </BodyPart>
       <BodyPart color={"#eb757f"} id={'skills'}>
         <MySkills></MySkills>
       </BodyPart>
-      <BodyPart color={"#f5c544"} id={'experience'}>
+      <BodyPart color={"#f5c544"} id={'exp'}>
         <Experience></Experience>
       </BodyPart>
       <BodyPart color={"#4495e5"} id={'current'}>
