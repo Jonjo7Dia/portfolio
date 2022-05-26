@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classes from "./ContactForm.module.css";
 import Alert from "./Alert";
 import emailjs from "emailjs-com";
@@ -12,6 +12,7 @@ const validateEmail = (email) => {
 const checkCorrect = (obj) => {
   return obj === classes.correct;
 };
+
 
 function ContactForm() {
   const sendEmail = (e) => {
@@ -27,6 +28,17 @@ function ContactForm() {
         }
       );
   };
+  const myRef = useRef();
+  const [startAnimation, setStartAnimation] = useState();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setStartAnimation(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, [startAnimation]);
+
   const formRef = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -64,7 +76,7 @@ function ContactForm() {
   };
 
   return (
-    <div className={classes.contactForm}>
+    <div className={classes.contactForm} ref={myRef}>
       {showAlert.show && (
         <Alert
           good={showAlert.good}
@@ -77,7 +89,7 @@ function ContactForm() {
         <form action="" onSubmit={submitHandler} id={"form"} ref={formRef}>
           <div className={classes.formBody}>
             <div className={classes.nameSubject}>
-              <div className={`${classes.formInput} ${classes.name}`}>
+              <div className={`${classes.formInput} ${classes.name} ${startAnimation && classes.nameAnimation}`}>
                 <input
                   type="text"
                   placeholder={"Name"}
@@ -96,7 +108,7 @@ function ContactForm() {
                 />
                 <span className={name.class}></span>
               </div>
-              <div className={`${classes.formInput} ${classes.email}`}>
+              <div className={`${classes.formInput} ${classes.email} ${startAnimation && classes.emailAnimation}`}>
                 <input
                   type="email"
                   placeholder={"Email"}
@@ -117,7 +129,7 @@ function ContactForm() {
               </div>
             </div>
             <div className={classes.nameSubject}>
-              <div className={`${classes.formInput} ${classes.subject}`}>
+              <div className={`${classes.formInput} ${classes.subject} ${startAnimation && classes.subjectAnimation}`}>
                 <input
                   type="text"
                   placeholder={"Subject"}
@@ -136,7 +148,7 @@ function ContactForm() {
               </div>
             </div>
             <div className={classes.message}>
-              <div className={` ${classes.formMessage} ${classes.formInput}`}>
+              <div className={` ${classes.formMessage} ${classes.formInput} ${startAnimation && classes.messageAnimation}`}>
                 <textarea
                   cols="100%"
                   rows="10"
