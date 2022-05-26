@@ -1,0 +1,52 @@
+.alert{
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100vw; /* Full width (cover the whole page) */
+    height: 100vh; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alertBody {
+
+    height: 15rem;
+    width: 20rem;
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.alertBody p {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.close {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 25px;
+    color: black;
+    font-family: 'Roboto';
+}
+.close:hover {
+    color: white;
+}
+
+.good {
+    background-color: #4495e5;
+}
+.bad {
+    background-color: #eb757f;
+}

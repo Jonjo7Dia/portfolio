@@ -3,6 +3,8 @@
   scroll-snap-type: y mandatory;
   scroll-snap-stop: normal;
   overflow-y: scroll;
+  overflow-x: hidden;
+
   scroll-behavior: smooth;
   height: 100vh;
 }
@@ -11,6 +13,7 @@ html {
   scroll-snap-type: y mandatory;
   scroll-snap-stop: normal;
   overflow-y: scroll;
+  overflow-x: hidden;
 
 }
 

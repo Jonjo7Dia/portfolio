@@ -36,11 +36,15 @@ function NavBar(props) {
     ];
     line1Style = line2Style = line3Style = "";
   }
-  console.log(props.currentView);
 
   return (
     <div className={classes.navBar}>
-      <div className={classes.current}>{props.currentView}</div>
+      <div className={classes.current}>
+        {props.currentView !== "My Skills" &&
+          props.currentView !== "Contact" &&
+          props.currentView}
+      </div>
+
       <ul style={listStyle}>
         <li className={links[0]}>
           <Link
@@ -50,6 +54,7 @@ function NavBar(props) {
               const pos = el.getBoundingClientRect();
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
+              setNavClick(!navClick);
             }}
             className={`${
               props.currentView === "About" ? classes.selected : ""
@@ -66,6 +71,7 @@ function NavBar(props) {
               const pos = el.getBoundingClientRect();
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
+              setNavClick(!navClick);
             }}
             className={`${
               props.currentView === "My Skills" ? classes.selected : ""
@@ -83,9 +89,11 @@ function NavBar(props) {
               const pos = el.getBoundingClientRect();
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
+              setNavClick(!navClick);
             }}
-          className={`${props.currentView === 'My Experience' ? classes.selected : ''}`} 
-
+            className={`${
+              props.currentView === "My Experience" ? classes.selected : ""
+            }`}
           >
             Experience
           </Link>
@@ -98,9 +106,11 @@ function NavBar(props) {
               const pos = el.getBoundingClientRect();
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
+              setNavClick(!navClick);
             }}
-          className={`${props.currentView === 'Current Project' ? classes.selected : ''}`} 
-
+            className={`${
+              props.currentView === "Current Project" ? classes.selected : ""
+            }`}
           >
             Current Project
           </Link>
@@ -113,9 +123,11 @@ function NavBar(props) {
               const pos = el.getBoundingClientRect();
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
+              setNavClick(!navClick);
             }}
-          className={`${props.currentView === 'My Resume' ? classes.selected : ''}`} 
-
+            className={`${
+              props.currentView === "My Resume" ? classes.selected : ""
+            }`}
           >
             Resume
           </Link>
@@ -129,9 +141,11 @@ function NavBar(props) {
 
               const body = document.querySelector("#body");
               body.scrollBy(0, pos.y);
+              setNavClick(!navClick);
             }}
-          className={`${props.currentView === 'Contact' ? classes.selected : ''}`} 
-
+            className={`${
+              props.currentView === "Contact" ? classes.selected : ""
+            }`}
           >
             Contact
           </Link>

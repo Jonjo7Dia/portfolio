@@ -1,0 +1,216 @@
+.contactForm {
+    height: 50vh;
+    width: 50%;
+    position: relative;
+}
+.form {
+    width: 100%;
+    height: 100%;
+
+}
+
+.form form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.name {
+    width: 49%;
+}
+.email{
+    width: 49%;
+}
+.subject {
+    width: 100%;
+}
+.formInput {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.formInput span{
+    width: 0;
+    height: 3px;
+}
+.incorrect{
+    animation: growSpan 1s forwards;
+    background-color: #eb757f;
+
+}
+.correct {
+    animation: growSpan 1s forwards;
+    background-color: #4495e5;
+
+}
+.shrinkSpanCorrect {
+    width: 0;
+    animation: shrink 1s forwards;
+    background-color: #4495e5;
+
+}
+.shrinkSpanIncorrect{
+    animation: shrink 1s forwards;
+    background-color: #eb757f;
+}
+.formInput input{
+    width: 100%;
+    height: 95%;
+    outline: none;
+    border: none;
+    background-color: #2b2b2b;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: #757575;
+}
+
+.formBody {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+.submitButton {
+    width:100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nameSubject {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.message {
+    width: 100%;
+    height: 60%;
+
+}
+
+.formMessage textarea {
+    width: 100%;
+    height: 95%;
+    outline: none;
+    border: none;
+    background-color: #2b2b2b;
+    padding-left: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: #757575;
+    
+}
+.center {
+    width: 180px;
+    height: 60px;
+    position: relative;
+  }
+  
+  .linkButton,.gone {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 4px solid #eb757f;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+  
+  .linkButton svg, .gone svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke-width: 2px;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .linkButton:hover ,.gone:hover {
+    transition: 1s ease-in-out;
+    background: #4495e5;
+  }
+  
+  .linkButton:hover svg, .gone:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .linkButton span,
+  .gone span {
+    color: white;
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+  .linkButton a,
+  .gone a{
+      text-decoration: none;
+  }
+  .center p {
+      
+      width: 100%;
+      margin-top: 20%;
+      padding: 0;
+      font-size: 2vw;
+      text-align: center;
+  
+  }
+  
+  
+  
+
+@media screen and (max-width: 900px){
+    .contactForm {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 760px){
+    .contactForm {
+        width: 95%;
+    }
+}
+
+@keyframes growSpan {
+    from{
+        width: 0;
+    }
+    to {
+        width: 100%
+    }
+}
+@keyframes shrink {
+    from{
+        width: 100%;
+    }
+    t0 {
+        width: 0;
+    }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+  -webkit-text-fill-color: #757575;
+  -webkit-box-shadow: 0 0 0px 1000px #2b2b2b inset;
+  transition: #2b2b2b 5000s ease-in-out 0s;
+}
+
+

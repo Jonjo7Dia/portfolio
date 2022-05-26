@@ -1,4 +1,6 @@
 import classes from "./Contact.module.css";
+import ContactHeader from './contactComponents/contactHeader/ContactHeader';
+import ContactForm from './contactComponents/contactForm/ContactForm';
 import { useEffect, useRef, useState } from "react";
 
 function Contact(props) {
@@ -18,7 +20,8 @@ function Contact(props) {
   return (
     <div className={classes.contact}>
       <div className={classes.marker} ref={myRef}></div>
-      contact
+      <ContactHeader />
+      <ContactForm />
     </div>
   );
 }
