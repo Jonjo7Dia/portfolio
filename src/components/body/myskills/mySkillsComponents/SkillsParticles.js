@@ -1,13 +1,17 @@
 import classes from "./SkillsParticles.module.css";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 function SkillsParticles() {
   const [mobileDevice, setMobileDevice] = useState(
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     )
   );
+  useEffect(()=>{
+    setMobileDevice(false);
+
+  },[mobileDevice])
   let limit;
   if (!mobileDevice) {
     limit = 200;

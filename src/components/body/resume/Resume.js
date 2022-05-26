@@ -1,6 +1,6 @@
 import classes from "./Resume.module.css";
-import CV from "../../files/CV-Image.png";
-import file from "../../files/cv.pdf";
+import CV from "../../files/Jonathan Hjelmstrom Resume.jpg";
+import file from "../../files/Jonathan Hjelmstrom Resume.pdf";
 import { useEffect, useRef, useState } from "react";
 
 function Resume(props) {
