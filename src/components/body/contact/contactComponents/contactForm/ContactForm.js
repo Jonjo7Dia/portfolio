@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import classes from "./ContactForm.module.css";
-import Alert from './Alert';
+import Alert from "./Alert";
+import emailjs from "emailjs-com";
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -9,54 +10,82 @@ const validateEmail = (email) => {
     );
 };
 const checkCorrect = (obj) => {
-    return obj === classes.correct;
-}
+  return obj === classes.correct;
+};
+
 function ContactForm() {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_nikyb84", "template_8eaa99g", formRef.current, "LmIXGASkOq8Kq7GEg")
+      .then(
+        (result) => {
+        },
+        (error) => {
+          alert(error.text);
+        }
+      );
+  };
+  const formRef = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState({subject: '', class: classes.correct});
+  const [subject, setSubject] = useState({
+    subject: "",
+    class: classes.correct,
+  });
   const [message, setMessage] = useState("");
   const form = document.getElementById("form");
-  const [showAlert, setShowAlert] = useState({show: false, good: false});
+  const [showAlert, setShowAlert] = useState({ show: false, good: false });
   const submitHandler = (event) => {
     event.preventDefault();
-    const values = [classes.correct, name.class, email.class, subject.class, message.class];
-    if(values.every(checkCorrect) ){
-        form.reset();
-        setName({ name: "", class: classes.shrinkSpan });
-        setEmail({ email: "", class: classes.shrinkSpan });
-        setSubject({ subject: "", class: classes.shrinkSpan });
-        setMessage({ message: "", class: classes.shrinkSpan });
-        setShowAlert({show: true, good: true})
+    const values = [
+      classes.correct,
+      name.class,
+      email.class,
+      subject.class,
+      message.class,
+    ];
+    if (values.every(checkCorrect)) {
+      sendEmail(event);
+      form.reset();
+      setName({ name: "", class: classes.shrinkSpan });
+      setEmail({ email: "", class: classes.shrinkSpan });
+      setSubject({ subject: "", class: classes.shrinkSpan });
+      setMessage({ message: "", class: classes.shrinkSpan });
+      setShowAlert({ show: true, good: true });
+    } else {
+      setShowAlert({ show: true, good: false });
+      setName({ name: "", class: classes.incorrect });
+      setEmail({ email: "", class: classes.incorrect });
+      setSubject({ subject: "", class: classes.incorrect });
+      setMessage({ message: "", class: classes.incorrect });
     }
-    else {
-        setShowAlert({show: true, good: false})
-        setName({ name: "", class: classes.incorrect });
-        setEmail({ email: "", class: classes.incorrect });
-        setSubject({ subject: "", class: classes.incorrect });
-        setMessage({ message: "", class: classes.incorrect });
-    }
-   
   };
 
   return (
     <div className={classes.contactForm}>
-       {showAlert.show && <Alert good ={showAlert.good} onClick={()=>{
-           setShowAlert({show: false, good: false});
-       }} />}
+      {showAlert.show && (
+        <Alert
+          good={showAlert.good}
+          onClick={() => {
+            setShowAlert({ show: false, good: false });
+          }}
+        />
+      )}
       <div className={classes.form}>
-        <form action="" onSubmit={submitHandler} id={"form"}>
+        <form action="" onSubmit={submitHandler} id={"form"} ref={formRef}>
           <div className={classes.formBody}>
             <div className={classes.nameSubject}>
               <div className={`${classes.formInput} ${classes.name}`}>
                 <input
                   type="text"
                   placeholder={"Name"}
-                  onFocus={()=>{
-                    setName({name: '', class: ''})
+                  name={"from_name"}
+                  onFocus={() => {
+                    setName({ name: "", class: "" });
                   }}
                   onBlur={(e) => {
-
                     e.target.value.trim().length > 1
                       ? setName({
                           name: e.target.value,
@@ -71,8 +100,9 @@ function ContactForm() {
                 <input
                   type="email"
                   placeholder={"Email"}
-                  onFocus={()=>{
-                    setEmail({name: '', class: ''})
+                  name="reply_to"
+                  onFocus={() => {
+                    setEmail({ name: "", class: "" });
                   }}
                   onBlur={(e) => {
                     validateEmail(e.target.value)
@@ -91,9 +121,10 @@ function ContactForm() {
                 <input
                   type="text"
                   placeholder={"Subject"}
-                  onFocus={()=>{
-                    setSubject({name: '', class: classes.correct})
+                  onFocus={() => {
+                    setSubject({ name: "", class: classes.correct });
                   }}
+                  name={"subject"}
                   onBlur={(e) => {
                     setSubject({
                       subject: e.target.value,
@@ -107,15 +138,14 @@ function ContactForm() {
             <div className={classes.message}>
               <div className={` ${classes.formMessage} ${classes.formInput}`}>
                 <textarea
-                  name=""
-                  id=""
                   cols="100%"
                   rows="10"
+                  name={'message'}
                   placeholder={"Message"}
-                  onFocus={()=>{
-                    setMessage({name: '', class: ''})
+                  onFocus={() => {
+                    setMessage({ name: "", class: "" });
                   }}
-                  onBlur={(e) => {
+                  onChange={(e) => {
                     e.target.value.trim().length > 2
                       ? setMessage({
                           message: e.target.value,
@@ -124,6 +154,7 @@ function ContactForm() {
                       : setMessage({ message: "", class: classes.incorrect });
                   }}
                 ></textarea>
+              
                 <span className={message.class}></span>
               </div>
             </div>
