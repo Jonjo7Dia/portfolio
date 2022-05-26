@@ -2,6 +2,7 @@ import classes from "./About.module.css";
 import AboutHeader from "./aboutComponents/AboutHeader";
 import AboutBody from "./aboutComponents/AboutBody";
 import { useEffect, useRef, useState } from "react";
+import image from '../../images/about-background.png'
 
 function About(props) {
   const myRef = useRef();
@@ -20,7 +21,9 @@ function About(props) {
   return (
     <div className={classes.about}  >
       <div className={classes.marker} ref={myRef}></div>
-
+       <div className={classes.backgroundPhoto}>
+         <img src={image} alt=""/>
+       </div>
       <AboutHeader />
       <AboutBody />
     </div>

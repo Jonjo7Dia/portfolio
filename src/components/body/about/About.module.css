@@ -8,7 +8,19 @@
     position: relative;
     overflow: hidden;
 }
+.backgroundPhoto {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
+}
+.backgroundPhoto img {
+    max-height: 100%;
+    max-width: 100%;
+    transform: scale(1.1,1.3);
+}
 .marker {
     position: absolute;
     bottom: 50%;
