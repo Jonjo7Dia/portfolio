@@ -80,8 +80,13 @@
     padding-left: 20px;
     box-sizing: border-box;
     font-family: 'Poppins';
-    color: #757575;
+    color: white;
 }
+.formInput input::placeholder{
+    color: #e6e6e6;
+
+}
+
 
 .formBody {
     height: 80%;
@@ -127,8 +132,11 @@
     padding-top: 20px;
     box-sizing: border-box;
     font-family: 'Poppins';
-    color: #757575;
+    color: white;
     
+}
+.formMessage textarea::placeholder {
+    color: #e6e6e6;
 }
 .center {
     width: 180px;
@@ -199,6 +207,19 @@
 @media screen and (max-width: 760px){
     .contactForm {
         width: 95%;
+    }
+    .messageAnimation{
+        animation: none;
+    }
+    .subjectAnimation {
+        animation: none;
+    }
+    .nameAnimation{
+        animation: none;
+
+    }
+    .emailAnimation {
+        animation: none;
     }
 }
 

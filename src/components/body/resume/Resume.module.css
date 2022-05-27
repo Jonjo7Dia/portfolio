@@ -39,4 +39,7 @@
     .marker {
         bottom: 10%;
     }
+    .resume img:hover{
+      transform: none;
+    }
 }

@@ -7,7 +7,15 @@ import { useEffect, useRef, useState } from "react";
 function MySkills(props) {
   const myRef = useRef();
   const [startAnimation, setStartAnimation] = useState();
-  
+  const [mobileDevice, setMobileDevice] = useState(
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  );
+  useEffect(()=>{
+    setMobileDevice(false);
+
+  },[mobileDevice])
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
@@ -24,7 +32,7 @@ function MySkills(props) {
       <div className={classes.marker} ref={myRef}></div>
 
       <SkillsDescription />
-      <SkillsParticles />
+      {!mobileDevice && <SkillsParticles />}
       <SkillsIcons />
     </div>
   );

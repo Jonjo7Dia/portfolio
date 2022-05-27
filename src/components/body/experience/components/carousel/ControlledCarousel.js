@@ -5,11 +5,11 @@ import Quizlet from "./slides/Quizlet";
 import Portfolio from "./slides/Portfolio";
 import Compound from "./slides/Compound";
 import VirtualBar from './slides/VirtualBar'
-function ControlledCarousel(props) {
+function ControlledCarousel() {
   useState();
   const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
   return (

@@ -10,7 +10,7 @@
     z-index: 1;
 }
 .aboutHeader img {
-    max-width: 15rem;
+    max-height: 40%;
 }
 .aboutHeader h1{
     text-align: center;

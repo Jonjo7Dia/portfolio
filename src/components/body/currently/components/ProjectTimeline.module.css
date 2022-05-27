@@ -74,6 +74,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 760px) {
   .timelineBody {
     width: 100%;
@@ -93,12 +95,16 @@
     height: 100%;
     border-top-right-radius: 0;
     border-bottom-left-radius: 1.5em;
-    animation: progressMobile 2.5s ease-in;
+    animation: none !important;
   }
   .timeLabels {
       width: 100%;
       height: 80%;
       justify-content: center
+  }
+  .finished {
+    animation: none !important;
+    color: white !important;
   }
 
   .labelsWrapper {
@@ -121,6 +127,10 @@
       text-align: left;
       width: 100%;
   }
+  .la {
+    color: white;
+  }
+
 }
 
 @keyframes progressMobile {

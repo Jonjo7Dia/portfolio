@@ -25,8 +25,8 @@ function ProjectTimeline() {
     <div className={classes.timelineBody} ref={myRef}>
       <div className={classes.timeLabels}>
         <div className={classes.labelsWrapper}>
-          <div>
-            <p className={finished}>Frontend</p>
+          <div className= {classes.la}>
+            <p className={`${finished} `}>Frontend</p>
           </div>
           <div>
             <p>Backend</p>

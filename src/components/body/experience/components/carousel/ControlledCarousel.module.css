@@ -1,6 +1,7 @@
 .slideShow{
     height: 100%;
     width: 100%;
+
 }
 
 .slide {
@@ -12,5 +13,13 @@
 .carousel-item {
     width: 100%;
     height: 100%;
+
+}
+.slideShow button {
+    color: black
+}
+.slideShow span {
+    filter: invert(100%);
+
 
 }
