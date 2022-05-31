@@ -14,7 +14,7 @@ function VirtualBar() {
       link={'https://virtualbartraining.com/'}
       github={'https://github.com/Jonjo7Dia/Virtual-Bar-Training'}
       description={description}
-      alternate={'My very first project! where users can practice and test bar knowledge'}
+      alternate={'My very first project! where users can practice and test bar knowledge, unfortunately there is no mobile version available'}
     />
   );
 }

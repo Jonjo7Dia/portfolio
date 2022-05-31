@@ -1,13 +1,15 @@
 .techStack{
     width: 3rem;
-    height: 2rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    
 }
 .techStack img{
     max-width: 100%;
+    max-height: 98%;
 }
   
 .tooltiptext {

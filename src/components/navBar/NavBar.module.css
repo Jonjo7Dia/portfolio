@@ -142,51 +142,33 @@ margin: 0;
     
 
     .link1 {
-       animation: navLinkFade .5s ease forwards .5s;
+       animation: navLinkFade 0.5s ease forwards;
     }
-    .link1Out{
-       animation: navLinkFadeOut .5s ease forwards .5s;
-
-    }
+  
     .link2 {
-        animation: navLinkFade .5s ease forwards .6s;
+        animation: navLinkFade .5s ease forwards 0.1s;
     }
-    .link2Out{
-       animation: navLinkFadeOut .5s ease forwards .5s;
-
-    }
+   
     .link3{
-        animation: navLinkFade .5s ease forwards .7s;
+        animation: navLinkFade .5s ease forwards .2s;
 
     }
-    .link3Out{
-       animation: navLinkFadeOut .5s ease forwards .5s;
 
-    }
     .link4 {
-        animation: navLinkFade .5s ease forwards .8s;
+        animation: navLinkFade .5s ease forwards .3s;
 
     }
-    .link4Out{
-       animation: navLinkFadeOut .5s ease ease-out .5s;
-
-    }
+   
     .link5{
-        animation: navLinkFade .5s ease forwards .9s;
+        animation: navLinkFade .5s ease forwards .4s;
 
     }
-    .link5Out{
-       animation: navLinkFadeOut .5s ease forwards .5s;
-
-    }
+   
     .link6{
-        animation: navLinkFade .5s ease forwards 1s;
+        animation: navLinkFade .5s ease forwards .5s;
 
     }
-    .link6Out{
-       animation: navLinkFadeOut .5s ease forwards .5s;
 
-    }
 
     .burger{
 

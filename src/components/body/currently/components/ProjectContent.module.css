@@ -74,9 +74,9 @@
   .description {
     top: 50%;
     left: 0;
-    width: 95%;
+    width: 97.5%;
     height: 50%;
-    margin-left: 2.5%;
+    margin-left: 1.25%;
   }
 }
 @media screen and (max-width: 680px) {

@@ -56,9 +56,20 @@
 
 }
 
-
+.noMobile {
+  display: none;
+}
+.yesMobile{
+  display: block;
+}
 
 @media only screen and (min-width: 660px) and (max-width: 830px){
+  .yesMobile {
+    display: none;
+  }
+  .noMobile {
+    display: block;
+  }
     .center{
         position: absolute;
         top: 56%;
