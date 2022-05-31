@@ -1,5 +1,5 @@
 import classes from "./CurrentProject.module.css";
-import ProjectTimeline from "./components/ProjectTimeline";
+// import ProjectTimeline from "./components/ProjectTimeline";
 import ProjectContent from "./components/ProjectContent";
 import { useEffect, useRef, useState } from "react";
 function CurrentProject(props) {
@@ -23,7 +23,7 @@ function CurrentProject(props) {
 
       <ProjectContent />
 
-      <ProjectTimeline />
+
     </div>
   );
 }

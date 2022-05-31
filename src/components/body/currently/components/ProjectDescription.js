@@ -17,8 +17,8 @@ function ProjectDescription() {
         </div>
       </div>
       <div className={classes.projectAbout}>
-        <p className={classes.primaryAbout}>At first I wanted to just create a full-stack application that encapsulated all that I learnt so far. At the same time, while living with room mates I saw that we used a bunch of apps to organize our independent as well as dependent lives, so I thought why not have all the same features that those apps offer and put them under one roof? and now this full-stack project turneed in to a product that I am building to serve other people in the same situation. Serving the best of both world this application aims to include the backend technologies of node & express, whille taking advantage of the ui componnets that react offers, and to wrap it all up mongoDB will work as the database</p>
-        <p className={classes.alternateAbout}>A platform where users who live together can share calendars, expenses and more.</p>
+        <p className={classes.primaryAbout}>At first I wanted to just create a full-stack application that encapsulated all that I learnt so far. At the same time, while living with room-mates I saw that we used a bunch of apps to organize our independent and dependent lives, so I thought why not have all the same features that those apps offer and put them under one roof? and now this full-stack project turned into a product that I am building to serve other people in the same situation. Serving the best of both worlds, this application aims to include the backend technologies of node & express, whille taking advantage of the ui componnets that react offers, and to wrap it all up mongoDB will work as the database</p>
+        <p className={classes.alternateAbout}>A platform where users who live together can share calendars, expenses and more. Currently, the project's frontend is finished</p>
       </div>
       <div className={classes.techUsed}>
         {tech.map((tech, index) => {

@@ -5,8 +5,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   position: relative;
+}
+.cvLink{
+  color: white;
+  font-size: 20px;
+  font-family: 'Poppins';
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.cvLink:hover {
+  color: white;
+  text-decoration: underline;
 }
 .marker {
   position: absolute;
@@ -22,8 +37,8 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
-.resume a {
-  height: 100%;
+.resume .cv {
+  height: 90%;
   width: 95%;
   text-decoration: none;
   display: flex;

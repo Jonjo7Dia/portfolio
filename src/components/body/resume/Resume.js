@@ -21,8 +21,11 @@ function Resume(props) {
     <div className={classes.resume}>
       <div className={classes.marker} ref={myRef}></div>
 
-      <a href={file} download={"Jonathan Hjelmstrom CV"}>
+      <a  className={classes.cv} href={file} download={"Jonathan Hjelmstrom CV"}>
         <img src={CV} alt="" />
+      </a>
+      <a className={classes.cvLink} href={file} download={"Jonathan Hjelmstrom CV"}>
+        Click Here to Download!
       </a>
     </div>
   );

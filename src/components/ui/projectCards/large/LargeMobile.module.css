@@ -1,12 +1,12 @@
 .largeMobile {
-    width:  18%;
-    height: 65%;
-    background-color: #3c3c3c;
+    width:  20%;
+    height: 55%;
+
     border-radius: 14px;
     position: absolute;
     left: 12%;
     top: 30%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,14 +14,17 @@
 }
 
 .phoneScreen {
-    width: 94%;
+    max-width: 94%;
     height: 96%;
+  
+    border-radius: 12px;
 
 
 }
 .phoneScreen img{
     max-width: 100%;
     height: 100%;
+    border: solid 4px #3c3c3c;
     border-radius: 12px;
 }
 
