@@ -64,12 +64,7 @@
 }
 
 @media only screen and (min-width: 660px) and (max-width: 830px){
-  .yesMobile {
-    display: none;
-  }
-  .noMobile {
-    display: block;
-  }
+
     .center{
         position: absolute;
         top: 56%;
@@ -77,6 +72,12 @@
    
 }
 @media only screen and (max-width: 830px){
+  .yesMobile {
+    display: none;
+  }
+  .noMobile {
+    display: block;
+  }
     .gone {
         display:none;
     }

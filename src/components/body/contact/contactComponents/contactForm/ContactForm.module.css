@@ -22,7 +22,7 @@
     
 }
 .nameAnimation {
-    animation: fadeIn .5s ease-in;
+    animation: fadeIn .2s ease-in;
 
 }
 .email{
@@ -30,7 +30,7 @@
 
 }
 .emailAnimation {
-    animation: fadeIn .7s ease-in;
+    animation: fadeIn .4s ease-in;
 
 }
 .subject {
@@ -38,7 +38,7 @@
 
 }
 .subjectAnimation {
-    animation: fadeIn .8s ease-in;
+    animation: fadeIn .5s ease-in;
 
 }
 .formInput {
@@ -118,7 +118,7 @@
 
 }
 .messageAnimation {
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 0.7s ease-in;
 
 }
 
@@ -242,7 +242,7 @@
 @keyframes fadeIn {
     from {
 
-        transform: translateY(60px);
+        transform: translateY(20%);
     }
     to {
 

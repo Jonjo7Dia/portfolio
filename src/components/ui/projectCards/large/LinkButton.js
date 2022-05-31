@@ -17,14 +17,20 @@ function LinkButton(props) {
       )}
       {!props.mobile && (
         <button className={buttonClass}>
-          <a href={props.link} target="_blank" rel="noreferrer">
+          <a className={classes.yesMobile} href={props.link} target="_blank" rel="noreferrer">
+            <svg width="180px" height="60px" viewBox="0 0 180 60">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" />
+            </svg>
+            <span >VIEW LIVE</span>
+          </a>
+          <a className={classes.noMobile} target="_blank" rel="noreferrer">
             <svg width="180px" height="60px" viewBox="0 0 180 60">
               <polyline points="179,1 179,59 1,59 1,1 179,1" />
               <polyline points="179,1 179,59 1,59 1,1 179,1" />
             </svg>
 
-            <span className={classes.noMobile}>NO MOBILE AVAILABLE</span>
-            <span className={classes.yesMobile}>VIEW LIVE</span>
+            <span >NO MOBILE AVAILABLE</span>
           </a>
         </button>
       )}
