@@ -6,17 +6,26 @@
     justify-content: center;
 }
 .socialIcons{
-    width: 8rem;
+    width: 30%;
     height: 100%;
-
+    color: white;
+    text-transform: uppercase;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    font-size: 2rem;
 }
 .socialIcons a {
+    font-size: 2rem !important;
+
+    height: 100%;
+    width: 30%;
     text-decoration: none;
     color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }
 .socialIcons a:hover{
     color: black;

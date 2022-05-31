@@ -11,7 +11,7 @@ function Body(props) {
   document.documentElement.style.setProperty("--vh", vh + "px");
   return (
     <div className={classes.body} id={"body"}>
-      <BodyPart color={"#4495e5"} id={"about"}>
+      <BodyPart color={"#4495e5"} id={"about"} indicator={true}>
         <About
          onView={(string) => {
           props.onView(string);
@@ -37,7 +37,7 @@ function Body(props) {
           }}
         ></CurrentProject>
       </BodyPart>
-      <BodyPart color={"#eb757f"} id={"resume"}>
+      <BodyPart color={"#eb757f"} id={"resume"} indicator={true}>
         <Resume
           onView={(string) => {
             props.onView(string);

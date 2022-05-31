@@ -26,11 +26,13 @@
     position: relative;
 }
 .alertBody p {
-    text-align: center;
+
     color: white;
     font-family: 'Poppins';
     letter-spacing: 2px;
     font-size: 20px;
+    width: 90%;
+    text-align: center;
 }
 .close {
     position: absolute;

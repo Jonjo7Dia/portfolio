@@ -9,7 +9,7 @@ function BodyPart(props) {
       <div className={classes.bodyPartContent}>
         {props.children}
       </div>
-      <BodyFooter/>
+      <BodyFooter indicator={props.indicator}/>
     </div>
   );
 }

@@ -42,7 +42,7 @@ function ProjectContent() {
       </div>
       <div className={classes.viewCode}>
       <button className={classes.linkButton}>
-          <a href={'google.com'} target="_blank" rel="noreferrer">
+          <a href={'https://github.com/Jonjo7Dia/housemates-frontend'} target="_blank" rel="noreferrer">
             <svg width="180px" height="60px" viewBox="0 0 180 60">
               <polyline points="179,1 179,59 1,59 1,1 179,1" />
               <polyline points="179,1 179,59 1,59 1,1 179,1" />
