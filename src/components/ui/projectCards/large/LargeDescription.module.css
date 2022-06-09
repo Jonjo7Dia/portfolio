@@ -94,6 +94,7 @@
         display: none;
     }
     .alternateAbout{
+
         display: block;
     }
     .techUsed{
@@ -120,7 +121,8 @@
         height: 30%;
         border: none;
         display: flex;
-        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
 
     }
     .projectAbout p{

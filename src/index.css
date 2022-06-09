@@ -12,6 +12,7 @@ body {
 
 
  }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,3 +26,7 @@ html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym
   vertical-align: baseline;
   background: transparent;
 }
+
+@viewport {  
+  orientation: portrait;  
+}  
