@@ -14,6 +14,7 @@ function Layout() {
           setCurrentBody(string)
         }}></Body>
       </main>
+      <div className={classes.rotate}>Please rotate device</div>
     </div>
   );
 }

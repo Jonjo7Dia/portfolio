@@ -9,3 +9,19 @@
     width: 100%;
 
 }
+
+@media only screen and (orientation:landscape) {
+   .rotate {
+       display: block;
+   }
+   main {
+       display: none;
+   }
+  }
+   
+  /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
+  @media only screen and (orientation:portrait) {
+    .rotate {
+        display: none;
+    }
+  }
