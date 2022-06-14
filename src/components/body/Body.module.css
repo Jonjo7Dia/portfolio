@@ -18,5 +18,8 @@ html {
 }
 
 @media screen and (max-width: 760px) {
-
+  .body {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
 }

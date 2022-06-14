@@ -15,6 +15,12 @@
     height: 100%;
 
 }
+.slideShow:first-child{
+    display:none !important;
+}
+.carousel-indicators{
+    display:none !important;
+}
 .slideShow button {
     color: black
 }
@@ -23,3 +29,4 @@
 
 
 }
+

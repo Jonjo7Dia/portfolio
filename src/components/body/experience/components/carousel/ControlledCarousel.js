@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Quizlet from "./slides/Quizlet";
 import Portfolio from "./slides/Portfolio";
 import Compound from "./slides/Compound";
-import VirtualBar from './slides/VirtualBar'
+import VirtualBar from "./slides/VirtualBar";
 function ControlledCarousel() {
   useState();
   const [index, setIndex] = useState(0);
@@ -12,6 +12,12 @@ function ControlledCarousel() {
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
+  window.addEventListener("load", function (event) {
+    document
+      .getElementsByClassName("carousel-indicators")[0]
+      .style.setProperty("display", "none");
+  });
+
   return (
     <Carousel
       activeIndex={index}

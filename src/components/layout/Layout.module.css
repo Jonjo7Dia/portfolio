@@ -9,8 +9,11 @@
     width: 100%;
 
 }
+.rotate {
+    display: none;
+}
 
-@media only screen and (orientation:landscape) {
+@media only screen and (orientation:landscape) and (max-height: 400px ) {
    .rotate {
        display: block;
    }
@@ -20,8 +23,4 @@
   }
    
   /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
-  @media only screen and (orientation:portrait) {
-    .rotate {
-        display: none;
-    }
-  }
+  
