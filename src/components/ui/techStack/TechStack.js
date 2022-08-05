@@ -9,6 +9,7 @@ import redux from "../svgPhotos/redux.svg";
 import firebase from "../svgPhotos/firebase.svg";
 import Chart from '../svgPhotos/chartjs-logo.svg';
 import classes from "./TechStack.module.css";
+import typescript from '../svgPhotos/typescript.svg'
 
 function TechStack(props) {
   const logos = {
@@ -51,13 +52,17 @@ function TechStack(props) {
     chart: {
       src: Chart,
       name: 'Chart.js'
+    },
+    typescript :{
+      src: typescript,
+      name: 'Typescript'
     }
   };
 
   return (
     <div className={classes.techStack}>
       <img src={logos[props.tech].src} alt={props.tech} />
-      <span className={classes.tooltiptext}>{logos[props.tech].name}</span>
+      <div className={classes.tooltiptext, classes.beColor} style={{backgroundColor: 'black'}}>{logos[props.tech].name}</div>
     </div>
   );
 }

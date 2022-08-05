@@ -16,9 +16,9 @@
 
   @media only screen and (max-width: 760px){
     .bodyPart {
-        height: calc(var(--vh, 1vh) * 100- 6rem);
+        height: calc(var(--vh, 1vh) * 100);
     }
     .bodyPartContent {
-        height: calc(var(--vh, 1vh) * 100 - 3rem);
+        height: calc(var(--vh, 1vh) * 100 - 6rem);
     }
   }

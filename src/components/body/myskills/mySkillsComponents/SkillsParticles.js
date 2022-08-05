@@ -85,6 +85,10 @@ function SkillsParticles() {
                 replaceColor: false,
               },
               {
+                src: "https://cdn.svgporn.com/logos/typescript-icon.svg",
+                replaceColor: false,
+              },
+              {
                 src: "https://cdn.svgporn.com/logos/nodejs.svg",
                 replaceColor: false,
               },
