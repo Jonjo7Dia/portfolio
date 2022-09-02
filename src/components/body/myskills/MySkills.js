@@ -1,6 +1,5 @@
 import classes from "./MySkills.module.css";
 import SkillsDescription from "./mySkillsComponents/SkillsDescription";
-import SkillsParticles from "./mySkillsComponents/SkillsParticles";
 import SkillsIcons from './mySkillsComponents/SkillsIcons';
 import { useEffect, useRef, useState } from "react";
 
@@ -32,7 +31,7 @@ function MySkills(props) {
       <div className={classes.marker} ref={myRef}></div>
 
       <SkillsDescription />
-      {!mobileDevice && <SkillsParticles />}
+      {/* {!mobileDevice && <SkillsParticles />} */}
       <SkillsIcons />
     </div>
   );

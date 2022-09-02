@@ -6,6 +6,7 @@ import MongoLogo from "../../../ui/svgPhotos/mongodb.svg";
 import NodeLogo from "../../../ui/svgPhotos/nodejs.svg";
 import ReactLogo from "../../../ui/svgPhotos/react.svg";
 import ExpressLogo from "../../../ui/svgPhotos/express.svg";
+import ReduxLogo from '../../../ui/svgPhotos/redux.svg';
 import { useEffect, useRef, useState } from "react";
 
 function SkillsIcons() {
@@ -28,9 +29,10 @@ function SkillsIcons() {
       classes.icon5,
       classes.icon6,
       classes.icon7,
+      classes.icon8,
     ];
   } else {
-    iconClasses = [null, null, null, null, null, null, null];
+    iconClasses = [null, null, null, null, null, null, null, null];
   }
 
   return (
@@ -51,10 +53,14 @@ function SkillsIcons() {
         <img src={MongoLogo} alt="mongologo" />
       </div>
       <div className={iconClasses[5]}>
-        <img src={ExpressLogo} alt="expressLogo" />
+        <img src={ReduxLogo} alt="nodeLogo" />
       </div>
       <div className={iconClasses[6]}>
         <img src={NodeLogo} alt="nodeLogo" />
+      </div>
+     
+      <div className={iconClasses[7]}>
+        <img src={ExpressLogo} alt="expressLogo" />
       </div>
     </div>
   );
